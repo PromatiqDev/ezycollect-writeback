@@ -1,0 +1,24 @@
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csprojAssemblyReference.cache
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csproj.CoreCompileInputs.cache
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\App.config
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.exe.config
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.exe
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.pdb
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\OpcHDAWrapper.dll
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\System.Net.Http.dll
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\OpcHDAWrapper.xml
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csproj.CopyComplete
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.exe
+C:\Development\OPC Data Collection\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.pdb
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\App.config
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.exe.config
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.exe
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\IQDataAlarmStorageService.pdb
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\OpcHDAWrapper.dll
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\System.Net.Http.dll
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\bin\Debug\OpcHDAWrapper.xml
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csprojAssemblyReference.cache
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csproj.CoreCompileInputs.cache
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.csproj.CopyComplete
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.exe
+C:\Users\Promatiq\OneDrive - PromatIQ\Promatiq Share\DataCollection WCF Storage Service\IQDataAlarmStorageService\obj\Debug\IQDataAlarmStorageService.pdb

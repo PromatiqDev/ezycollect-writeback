@@ -1,0 +1,9 @@
+﻿Uninstalling assembly 'C:\Development\Bitbucket\ezyCollect-Write-Back-Sync\WriteBack_Service\bin\Debug\ezyCollect_Writeback_Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Development\Bitbucket\ezyCollect-Write-Back-Sync\WriteBack_Service\bin\Debug\ezyCollect_Writeback_Service.exe
+   logfile = C:\Development\Bitbucket\ezyCollect-Write-Back-Sync\WriteBack_Service\bin\Debug\ezyCollect_Writeback_Service.InstallLog
+Removing EventLog source ezyCollect_Writeback.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

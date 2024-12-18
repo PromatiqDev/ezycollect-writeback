@@ -1,0 +1,1745 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpcAENet</name>
+    </assembly>
+    <members>
+        <member name="T:OPCAE.NET.Controls.CustomizeEventView">
+            <summary>
+            Summary description for CustomizeEventView.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.CustomizeEventView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.CustomizeEventView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.DefineCategory">
+            <summary>
+            Summary description for DefineCategory.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.DefineCategory.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.DefineCategory.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.DefineCategory.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.DefineName">
+            <summary>
+            Summary description for DefineName.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.DefineName.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.DefineName.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.DefineName.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventDetails">
+            <summary>
+            Summary description for EventDetails.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventDetails.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventDetails.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventDetails.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventFilter">
+            <summary>
+            Filter defintiions for the EventView control.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventFilter.#ctor">
+            <summary>
+            Constructor tht initializes default values.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.EventTypes">
+            <summary>
+            Event typee Simple, Tracking, Condition
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.EventCategories">
+            <summary>
+            OPC AE event category identification numbers
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.LowSeverity">
+            <summary>
+            Lower limit serverity number 1..1000
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.HighSeverity">
+            <summary>
+            Upper limit sevderity number 1..1000
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.AreaList">
+            <summary>
+            List of areas names.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventFilter.SourceList">
+            <summary>
+            List of event source names.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventView">
+            <summary>
+            The EventView control is a customizable control that displays events according the configuration settings.
+            The control con be configured by setting properties in the Visual Studio Designer or in configuration menues
+            during operation. This menues can be disabled by property settings.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.Start(OPCAE.NET.OpcEventServer)">
+            <summary>
+            This method is called to activate the control for a connected OPC AE server. 
+            An event subsrcription is created with the filter settings according the 
+            configuration selections.
+            </summary>
+            <param name="srv">Object of a connected OPC AE server.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.Stop">
+            <summary>
+            The control operation is terminated. The OPC AE server event subscription is disposed.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.OnOpcEvent(OPCAE.NET.Controls.OpcEventArgs)">
+            <summary>
+            Handler for user application OnEvent callbacks.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:OPCAE.NET.Controls.EventView.OnStatusInfo(OPCAE.NET.Controls.StatusInfoEventArgs)">
+            <summary>
+            Handler for user application OnStatusChange callbacks.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:OPCAE.NET.Controls.EventView.StatusInfo">
+            <summary>
+            Status/Error info events. The user can install event handler that handles error and info events.
+            The control status bar may set unvisible in such a case.
+            </summary>
+        </member>
+        <member name="E:OPCAE.NET.Controls.EventView.OpcEvent">
+            <summary>
+            The user can install event handlers that are called for each event from the OPC server.
+            This enables the user application to do special handling such as e.g. log the events without having 
+            to subscribe to the OPC AE server.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.ToolBarVisible">
+            <summary>
+            Determines if the toolbar is visible.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.StatusBarVisible">
+            <summary>
+            Determines if the status bar is visible.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.BackColor">
+            <summary>
+            The background color of the ListView.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.ForeColor">
+            <summary>
+            The foreground color of the ListView.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.NeedAckColor">
+            <summary>
+            The color of events that need to be ackowledged.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.AcknowledgerID">
+            <summary>
+            The Acknowledger ID string is sent to the OPC server in event acknowledge calls.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.MaxEventsInView">
+            <summary>
+            Determines the maximum number of events in the event view. If this number is reached then the oldest event in the control is removed.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.UpdateRate">
+            <summary>
+            The shortest time in milliseconds between OPC server event callbacks.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.EnableCustomize">
+            <summary>
+            Determines if the user can customize the columns in the Event View.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.EnableFilterChange">
+            <summary>
+            Determines if the user can customize the Event Filter.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.EnableAcknowledge">
+            <summary>
+            Determines if the user can acknowledge events.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.EnableDelete">
+            <summary>
+            Determines if the user can delete events.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.EnableDetailView">
+            <summary>
+            Determines if the user can select the Event Details view.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.EventView.NotificationFilter">
+            <summary>
+            Defines the Filter used in the event subscription.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventView.StatusInfoEventHandler">
+            <summary>
+            Handler method for status/error info events to the user application.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventView.OpcEventHandler">
+            <summary>
+            Handler method for OPC event notifications to the user application.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.EventColumns">
+            <summary>
+            Enumeration with all possible event control columns.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.ChangeMask">
+            <summary>
+            ChangeMask event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.NewState">
+            <summary>
+            NewState event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.Source">
+            <summary>
+            Source event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.Time">
+            <summary>
+            Time event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.Message">
+            <summary>
+            Message event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.EventType">
+            <summary>
+            EventType event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.EventCategory">
+            <summary>
+            EventCategory event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.Severity">
+            <summary>
+            Severity event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.ConditionName">
+            <summary>
+            ConditionName event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.SubconditionName">
+            <summary>
+            SubconditionName event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.Quality">
+            <summary>
+            Quality event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.AckRequired">
+            <summary>
+            AckRequired event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.ActiveTime">
+            <summary>
+            ActiveTime event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.EventAttributes">
+            <summary>
+            EventAttributes event information.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.EventColumns.ActorID">
+            <summary>
+            ActorID event information.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.StatusInfoEventArgs">
+            <summary>
+            Information passed to the user application status/error info event handler.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.StatusInfoEventArgs.AlarmText">
+            <summary>
+            Info/error message text.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.StatusInfoEventArgs.HResult">
+            <summary>
+            HRESULT error code.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.OpcEventArgs">
+            <summary>
+            Information passed to the user OnEvent event handler.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.Controls.OpcEventArgs.Data">
+            <summary>
+            OPC AE event data.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.Filter">
+            <summary>
+            Summary description for Filter.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.Filter.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.Filter.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.Filter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.Controls.FilterPreset">
+            <summary>
+            Summary description for FilterPreset.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.Controls.FilterPreset.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.FilterPreset.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.Controls.FilterPreset.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.OpcEventServer">
+            <summary>
+            The OpcAEServer class contains the functions as defined in the OPC AE Server object
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.#ctor">
+            <summary>
+            Default constructor. The error handling selection is set to ErrorsAsExecptions = false.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(System.String,System.String)">
+            <summary>
+            Connect to the named OPC Server on the named machine
+            </summary>
+            <param name="SrvName">IN: Server ProgId name</param>
+            <param name="ComputerName">IN: Computer network name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(System.String)">
+            <summary>
+            Connect to the named OPC Server on the named machine
+            </summary>
+            <param name="SrvName">IN: Server ProgId name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(OPC.Common.Host,System.String)">
+            <summary>
+            Connect to the named remote OPC Server
+            </summary>
+            <param name="accessInfo">IN: Computer naame and optional passsword etc</param>
+            <param name="SrvName">IN: Server ProgId name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.ConnectLocal(System.String)">
+            <summary>
+            Connect to the named OPC Server
+            </summary>
+            <param name="SrvName">IN: Server ProgId name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.ConnectRemoteNIOS(System.String,System.String)">
+            <summary>
+            Connect to the named remote OPC Server using .Net Interop Services
+            Must be used for OPC V1 servers
+            </summary>
+            <param name="ComputerName">IN: name of the remote computer</param>
+            <param name="SrvName">IN: Server ProgId name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(System.Guid)">
+            <summary>
+            Connect to the local OPC Server with the specified CLSID
+            </summary>
+            <param name="ClsidOPCserver">IN: CLSID of the server</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(System.String,System.Guid)">
+            <summary>
+            Connect to the remote OPC Server with the specified CLSID
+            </summary>
+            <param name="ComputerName">IN: network computer name</param>
+            <param name="ClsidOPCserver">IN: CLSID of the server</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Connect(OPC.Common.Host,System.Guid)">
+            <summary>
+            Connect to the remote OPC Server with the specified CLSID
+            </summary>
+            <param name="accessInfo">IN: network computer access info</param>
+            <param name="ClsidOPCserver">IN: CLSID of the server</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Disconnect">
+            <summary>
+            Disconnect from the OPC server. The COM interface are released.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetStatus(OPCAE.NET.EventServerStatus@)">
+            <summary>
+            Get the current status of the OPC Server.  
+            See OPC specs IOPCServer::GetStatus for details.
+            </summary>
+            <param name="srvStatus">OUT: current server status</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryAvailableFilters(OPCAE.OPCAEFilters@)">
+            <summary>
+            The QueryAvailableFilters method gives clients a means of finding out exactly 
+            which filter criteria are supported by a given event server. 
+            This method would typically be invoked before configuring thefilter on 
+            an OPCEventSubscription object.
+            </summary>
+            <param name="FilterMask">This is a pointer to a bit mask which indicates which types of filtering are supported by the server. 
+            See OPC specification for mask values.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryEventCategories(OPCAE.OPCAEEventType,System.Int32[]@,System.String[]@)">
+            <summary>
+            The QueryEventCategories method gives clients a means of finding out the specific 
+            categories of events supported by a given server. 
+            This method would typically be invoked prior to specifying an event filter. 
+            Servers will be able to define their own custom event categories, but a list of
+            recommended categories is provided.
+            </summary>
+            <param name="EventType">A bit mask specifying which event types are of interest: 
+            OPC_SIMPLE_EVENT, OPC_CONDITION_EVENT, OPC_TRACKING_EVENT, OPC_ALL_EVENTS.
+            These types can be OR’ed together to select multiple event types. 
+            A value of 0 is an error and causes E_INVALIDARG to be returned.</param>
+            <param name="EventCategories">Array of identifiers for the vendor-specific event categories implemented by the server. 
+            These IDs can be used in the event subscription interface for specifying filters. 
+            Category IDs must be unique across the server (e.g. if Category ID x is used for both simple events and condition events, 
+            then the ID must reference the exact same category.)</param>
+            <param name="EventCategoryDescs">Array of strings for the text names or descriptions for each of the event category IDs. 
+            This array corresponds to the EventCategories array.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryConditionNames(System.Int32,System.String[]@)">
+            <summary>
+            The QueryConditionNames method gives clients a means of finding out the specific 
+            condition names which the event server supports for the specified event category. 
+            This method would typically be invoked prior to specifying an event filter. 
+            Condition names are server specific.
+            </summary>
+            <param name="EventCategory">A event category identifier, as returned by the QueryEventCategories method. 
+            Only the names of conditions within this event category are returned.</param>
+            <param name="ConditionNames">Array of strings containing the condition names for the specified event category.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QuerySubConditionNames(System.String,System.String[]@)">
+            <summary>
+            The QuerySubConditionNames method gives clients a means of finding out the specific 
+            sub-condition names which are associated with the specified condition name. 
+            Condition names are server specific.
+            </summary>
+            <param name="ConditionName">A condition name, as returned by the QueryConditionNames method. 
+            Only the names of sub-conditions associated with this condition are returned.</param>
+            <param name="SubConditionNames">Array of strings containing the sub-condition names associated with the specified condition.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QuerySourceConditions(System.String,System.String[]@)">
+            <summary>
+            The QuerySourceConditions method gives clients a means of finding out the specific 
+            condition names associated with the specified source (e.g. FIC101).. 
+            Condition names are server specific.
+            </summary>
+            <param name="Source">A source name, as returned by the EventAreaBrower.GetQualifiedSourceName method. 
+            Only the names of conditions associated with this source are returned.</param>
+            <param name="ConditionNames">Array of strings containing the condition names for the specified source.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryEventAttributes(System.Int32,System.Int32[]@,System.String[]@,System.Runtime.InteropServices.VarEnum[]@)">
+            <summary>
+            Using the EventCategories returned by the QueryEventCategories method, client 
+            application can invoke the QueryEventAttributes method to get information about 
+            the vendor-specific attributes the server can provide as part of an event notification 
+            for an event within the specified event category. 
+            Simple servers may not support any vendor-specific attributes for some or even all 
+            EventCategories. Attributes of event notifications are described in Section 2.5.2. 
+            Some possible vendor-specific attributes are included in Appendix C. 
+            </summary>
+            <param name="EventCategory">One of the Event Category codes returned from the QueryEventCategories function.</param>
+            <param name="ppdwAttrIDs">Array of identifiers for vendor-specific event attributes associated with the event 
+            category and available from the server. These attribute IDs can be used in the event subscription interface to 
+            specify the information to be returned with an event notification.</param>
+            <param name="ppszAttrDescs">Array of strings for the text names or descriptions for each of the event attribute IDs. 
+            This array corresponds to the AttrIDs array.</param>
+            <param name="ppvtAttrTypes">Array of VARTYPES identifying the data type of each of the event attributes. 
+            This array corresponds to the AttrIDs array.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.TranslateToItemIDs(System.String,System.Int32,System.String,System.String,System.Int32[],System.String[]@,System.String[]@,System.Guid[]@)">
+            <summary>
+            Many OPC Alarm/Event servers are associated with OPC Data Access servers. 
+            Since these servers may provide a Data Access interface to some or all of the 
+            attributes associated with events, applications need the ability to determine the 
+            specific ItemID for one or more specific attribute ID codes given an associated 
+            source ID in order to be able to access the attribute via the Data Access interface. 
+            TranslateToItemIDs performs the required translation. This function will be useful 
+            for the case where the client wishes to use the OPC Data Access interface to subscribe 
+            to real-time data associated with a given event or alarm. 
+            Given an event source, and an array of associated attribute ID codes, return an 
+            array of the item ID strings corresponding to each attribute ID. The event source, 
+            along with the associated attribute IDs are returned as part of the IOPCEventSink::OnEvent 
+            callback mechanism. Attribute ID codes and descriptions for a given event category can 
+            also be queried via the IOPCEventServer::QueryEventAttributes function. 
+            The server must return a NULL string for those attribute IDs that do not have a 
+            corresponding item ID.
+            </summary>
+            <param name="Source">An event source for which to return the item IDs corresponding to each of an array of attribute IDs if they exist. 
+            (From OnEvent or from IOPCEventAreaBrowser)</param>
+            <param name="EventCategory">A DWORD event category code indicating the category of events for which item IDs are to be returned. 
+            (From OnEvent or from QueryEventCategories)</param>
+            <param name="ConditionName">The name of a condition within the event category for which item IDs are to be returned. 
+            (From OnEvent or from QueryConditionNames)</param>
+            <param name="SubconditionName">The name of a sub-condition within a multi-state condition (From OnEvent or from QuerySubconditionNames). 
+            This should be a NULL string for a single state condition.</param>
+            <param name="AssocAttrIDs">Array of DWORD IDs of vendor-specific event attributes associated with the generator ID and available 
+            from the server for which to return ItemIDs. Note: these attribute IDs are returned by the IOPCEventSink::OnEvent callback, 
+            and are selected via the SelectReturnedAttributes method. </param>
+            <param name="AttrItemIDs">Array of item ID strings corresponding to each event attribute ID associated with the generator ID. 
+            This array is the same length as the AssocAttrIDs array passed into the function. A Null string is returned if no item ID is 
+            available for this attribute. </param>
+            <param name="NodeNames">Array of network node names of the associated OPC Data Access Servers. 
+            A Null string is returned if the OPC Data Access Server is running on the local node. </param>
+            <param name="CLSIDs">Array of class IDs for the associated OPC Data Access Servers.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetConditionState(System.String,System.String,System.Int32[],OPCAE.OPCConditionState@)">
+            <summary>
+            Returns the current state information for the condition instance corresponding to 
+            the Source and ConditionName. The OPCCONDITIONSTATE structure is defined below. 
+            See section 2.4 for a discussion of conditions and their states.
+            </summary>
+            <param name="Source">Event source name.</param>
+            <param name="ConditionName">Condition name.</param>
+            <param name="AttributeIDs">List of attribute identifiers.</param>
+            <param name="CondState">Returned current condition state.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.EnableConditionByArea(System.String[])">
+            <summary>
+            Places the specified process areas into the enabled state. Therefore, the server 
+            will now generate condition-related events for these conditions as long as the 
+            source itself is enabled and no containing area in its hierarchy is disabled.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            enabled for all clients, and they will begin receiving the associated 
+            condition-related events.
+            </summary>
+            <param name="Areas"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.EnableConditionBySource(System.String[])">
+            <summary>
+            Places all conditions for the specified event sources into the enabled state. 
+            Therefore, the server will now generate condition-related events for these conditions.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            enabled for all clients, and they will begin receiving the associated 
+            condition-related events.
+            </summary>
+            <param name="Sources"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.DisableConditionByArea(System.String[])">
+            <summary>
+            Places the specified process areas into the disabled state. Therefore, the server 
+            will now cease generating condition-related events for these conditions.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            disabled for all clients, and they will stop receiving the associated 
+            condition-related events.
+            </summary>
+            <param name="Areas"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.DisableConditionBySource(System.String[])">
+            <summary>
+            Places all conditions for the specified event sources into the disabled state. 
+            Therefore, the server will no longer generate condition-related events for these 
+            conditions. The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are disabled 
+            for all clients, and they will stop receiving the associated condition-related events.
+            </summary>
+            <param name="Sources"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.AckCondition(System.String,System.String,System.String[],System.String[],System.Runtime.InteropServices.FILETIME[],System.Int32[],System.Int32[]@)">
+            <summary>
+            The client uses the AckCondition method to acknowledge one or more conditions 
+            in the Event Server. The client receives event notifications from conditions 
+            via the OnEvent callback.
+            This AckCondition method specifically acknowledges the condition becoming active 
+            or transitioning into a different sub-condition (and no other state transition 
+            of the condition). One or more conditions belong to a specific event source – 
+            the source of the event notification. For each condition-related event notification, 
+            the corresponding Source, Condition Name, Active Time and Cookie is received by 
+            the client as part of the OnEvent callback parameters.
+            </summary>
+            <param name="AcknowledgerID">A string passed in by the client, identifying who is acknowledging the conditions. 
+            This is an attribute (AcknowledgerID) of the condition that identifies who acknowledged the condition. 
+            This is just a string generated by the client. This is also also included as the ActorID in the acknowledgment event 
+            notification sent to all subscribing clients. A NULL string is not allowed, since a NULL AcknowledgerID indicates that 
+            the event was automatically acknowledged by the server.</param>
+            <param name="Comment">Comment string passed in by the client associated with acknowledging the conditions. 
+            A NULL string indicating no comment is allowed.</param>
+            <param name="Source">Array of event source strings identifying the source (or owner) of each condition that is being 
+            acknowledged, e.g. FIC101. Sources are passed to the client in the szSource member of the ONEVENTSTRUCT by the 
+            IOPCEventSink::OnEvent callback.</param>
+            <param name="ConditionName">Array of Condition Name strings identifying each condition that is being acknowledged. 
+            Condition Names are unique within the scope of the event server. Examples of Condition Names might be “LevelAlarm” 
+            or “Deviation”. Condition Names are passed to the client in the szConditionName member of the ONEVENTSTRUCT by the 
+            OnEvent callback.</param>
+            <param name="ActiveTime">Array of active times corresponding to each Source and ConditionName pair. 
+            This parameter uniquely identifies a specific transition of the condition to the active state or into a different 
+            sub-condition and is the same as the SubCondLastActive condition attribute. Active Times are passed to the client 
+            in the ActiveTime member of the ONEVENTSTRUCT by the OnEvent callback. If the condition has become 
+            active again or transitioned into a different sub-condition at a later time, this acknowledgment will be ignored.</param>
+            <param name="Cookie">Array of server supplied “cookies” corresponding to each Source and Condition Name pair, 
+            that in addition to the Active Time, uniquely identifies a specific event notification. 
+            Cookies are passed to the client in the dwCookie member of the ONEVENTSTRUCT by the OnEvent callback. 
+            The client is responsible for returning the same cookie parameter, received in the event notification, 
+            back to the server in the condition acknowledgment.</param>
+            <param name="Errors">Array of HRESULTS indicating the success of the individual acknowledgments. 
+            The errors correspond to the Source and ConditionName pairs passed in to the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.CreateAreaBrowser(OPCAE.NET.AreaBrowser@)">
+            <summary>
+            Create an OPCEventAreaBrowser object on behalf of this client and return the 
+            interface to the Client.
+            This object will support the IUnknown and IOPCEventAreaBrowser interfaces. 
+            The client can use this interface to browse the process areas available from 
+            the server as described in the IOPCEventAreaBrowser interface shown below.
+            If the OPC Event Server does not support browsing of the process area space, 
+            then this method will fail.
+            The client may create multiple OPCEventAreaBrowser objects in order to support 
+            concurrent access to multiple levels, in the case of a hierarchical area name space.
+            The OPCEventAreaBrowser uses conventional reference counting and thus will be 
+            deleted with all interfaces to it are released.
+            </summary>
+            <param name="browser">Created area browse object</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.SetLocaleID(System.Int32)">
+            <summary>
+            Set the default LocaleId for this session.  ( IOPCCommon::SetLocaleID )
+            </summary>
+            <param name="lcid">IN: requested LocalId</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetLocaleID(System.Int32@)">
+            <summary>
+            Get the current default LocalID.  ( IOPCCommon::GetLocaleID )
+            </summary>
+            <param name="lcid">OUT: LocaleId code</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryAvailableLocaleIDs(System.Int32[]@)">
+            <summary>
+            Query the LocaleIDs supported by the OPC Server. ( IOPCCommon::QueryAvailableLocaleIDs )
+            If any error occurs a ThrowExceptionForHR is thrown. 
+            </summary>
+            <param name="lcids">OUT: This is a bit mask which indicates which types of filtering are supported by the server.</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetErrorString(System.Int32)">
+            <summary>
+            Return the description for the specified error from the server.
+            The this fails the error description is taken from the wrapper internal table. 
+            </summary>
+            <param name="errorCode">IN: HRESULTS error code</param>
+            <returns>error description string</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.SetClientName(System.String)">
+            <summary>
+            Define a client name.  ( IOPCCommon::SetClientName )
+            </summary>
+            <param name="name">IN: name, e.g. node and exe name</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.EnableConditionByArea2(System.String[],System.Int32[]@)">
+            <summary>
+            Places the specified process areas into the enabled state. Therefore, the server 
+            will now generate condition-related events for these conditions as long as the 
+            source itself is enabled and no containing area in its hierarchy is disabled.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            enabled for all clients, and they will begin receiving the associated 
+            condition-related events.<br/>
+            This is an optional function that's not supported by all servers.
+            </summary>
+            <param name="Areas">An array of area names, as returned by EventAreaBrowser.GetQualifiedAreaName.</param>
+            <param name="Errors">Array of HRESULTS indicating the success of placing all conditions for all sources within a 
+            specified process area into the enabled state. The errors correspond to the areas passed into the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.EnableConditionBySource2(System.String[],System.Int32[]@)">
+            <summary>
+            Places all conditions for the specified event sources into the enabled state. 
+            Therefore, the server will now generate condition-related events for these conditions.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            enabled for all clients, and they will begin receiving the associated 
+            condition-related events.<br/>
+            This is an optional function that's not supported by all servers.
+            </summary>
+            <param name="Sources">An array of source names, as returned by EventAreaBrowser.GetQualifiedSourceName</param>
+            <param name="Errors">Array of HRESULTS indicating the success of placing all conditions for the specified event source 
+            into the enabled state. The errors correspond to the sources passed into the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.DisableConditionByArea2(System.String[],System.Int32[]@)">
+            <summary>
+            Places the specified process areas into the disabled state. Therefore, the server 
+            will now cease generating condition-related events for these conditions.
+            The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are 
+            disabled for all clients, and they will stop receiving the associated 
+            condition-related events.<br/>
+            This is an optional function that's not supported by all servers.
+            </summary>
+            <param name="Areas">An array of area names, as returned by EventAreaBrowser.GetQualifiedAreaName.</param>
+            <param name="Errors">Array of HRESULTS indicating the success of placing all conditions for all sources within a 
+            specified process area into the disabled state. The errors correspond to the areas passed into the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.DisableConditionBySource2(System.String[],System.Int32[]@)">
+            <summary>
+            Places all conditions for the specified event sources into the disabled state. 
+            Therefore, the server will no longer generate condition-related events for these 
+            conditions. The effect of this method is global within the scope of the event server. 
+            Therefore, if the server is supporting multiple clients, the conditions are disabled 
+            for all clients, and they will stop receiving the associated condition-related events.<br/>
+            This is an optional function that's not supported by all servers.
+            </summary>
+            <param name="Sources">An array of source names, as returned by EventAreaBrowser.GetQualifiedSourceName</param>
+            <param name="Errors">Array of HRESULTS indicating the success of placing all conditions for the specified event 
+            source into the disabled state. The errors correspond to the sources passed into the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetEnableStateByArea(System.String[],System.Boolean[]@,System.Boolean[]@,System.Int32[]@)">
+             <summary>
+             Returns the current enable state and the effective enable state for each area specified in Areas.<br/>
+            This is an optional function that's not supported by all servers.
+             </summary>
+             <param name="Areas">An array of area names, as returned by EventAreaBrowser.GetQualifiedAreaName</param>
+             <param name="Enabled">Array of BOOL indicating the current enable state of the corresponding area.<br/>
+             TRUE if the area is enabled, FALSE if it is disabled. Note this value reflects the state as a result of 
+             the last call to EnableConditionByArea2 or DisableConditionByArea2. In other words, it does not reflect 
+             the enable state of the containing areas in its hierarchy.</param>
+             <param name="EffectivelyEnabled">Array of BOOL indicating the effective enable state of the corresponding area.<br/>
+             TRUE if the area is enabled and all areas within the hierarchy of its containing areas are enabled. <br/>
+             FALSE if the area is disabled or any area within the hierarchy of its containing areas is disabled.</param>
+             <param name="Errors">Array of HRESULTS indicating the success of retrieving the enable state of the area. 
+             The errors correspond to the areas passed into the method.</param>
+             <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.GetEnableStateBySource(System.String[],System.Boolean[]@,System.Boolean[]@,System.Int32[]@)">
+            <summary>
+            Returns the current enable state and the effective enable state for each specified source.<br/>
+            This is an optional function that's not supported by all servers.
+            </summary>
+            <param name="Sources">An array of source names, as returned by GetQualifiedSourceName.</param>
+            <param name="Enabled">Array of bool indicating the current enable state of the corresponding source. 
+            TRUE if the source is enabled, FALSE if it is disabled.<br/>
+            Note this value reflects the state as a result of the last call to EnableConditionBySource2 or DisableConditionBySource2. 
+            In other words, it does not reflect the enable state of the containing areas in its hierarchy.</param>
+            <param name="EffectivelyEnabled">Array of bool indicating the effective enable state of the corresponding source. 
+            TRUE if the source is enabled and all areas within the hierarchy of its containing areas are enabled. 
+            FALSE if the source is disabled or any area within the hierarchy of its containing areas is disabled.</param>
+            <param name="Errors">Array of HRESULTS indicating the success of retrieving the enable state of the source. 
+            The errors correspond to the sources passed into the method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.IsAvailableNT(System.Boolean@)">
+            <summary>
+            Query the current security configuration of the OPC server to determine if the current server configuration 
+            provides OPC Security by NT credentials.
+            </summary>
+            <param name="available">TRUE: current configuration allows authorization using NT credentials, 
+            FALSE: current configuration has authorization using NT credentials disabled</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.QueryMinImpersonationLevel(System.Int32@)">
+            <summary>
+            Information method to help a client to determine the minimal impersonation level the server requires to gain 
+            proper access to secured data sources.
+            </summary>
+            <param name="minImpLevel">Least required impersonation level for proper access: RPC_C_IMP_LEVEL_ANONYMOUS,
+            RPC_C_IMP_LEVEL_IDENTIFY, RPC_C_IMP_LEVEL_IMPERSONATE, RPC_C_IMP_LEVEL_DELEGATE</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.ChangeUser">
+            <summary>
+            Signal the server that the client has changed the user credentials of its proxy blanket.
+            </summary>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.IsAvailablePriv(System.Boolean@)">
+            <summary>
+            Query the current security configuration of the OPC server to determine if the current server 
+            configuration provides OPC Security by private credentials.
+            </summary>
+            <param name="available">TRUE: current configuration allows authentication by private credentials, 
+            FALSE: current configuration has authentication by private credentials</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Logon(System.String,System.String)">
+            <summary>
+            Changes the identity of the client application’s user. Future access to any security objects will be authorized 
+            with the new user’s credentials until a subsequent call to Logoff() or Logon(). 
+            For OPC Servers which also implement IOPCSecurityNT, access checking with NT credentials will be disabled until Logoff() is called.
+            </summary>
+            <param name="userID">The user’s logon name; for logons in NT domains this string contains also the domain name, e.g., “OPC\Ben”</param>
+            <param name="password">The user’s password.</param>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="M:OPCAE.NET.OpcEventServer.Logoff">
+            <summary>
+            Remove the private credential established by the previous call to Logon(). 
+            OPC Security reverts to the state before the first call of Logon(), 
+            there are no private credentials active for the client.
+            </summary>
+            <returns>HRESULTS error/succes code as defined by OPC</returns>
+        </member>
+        <member name="P:OPCAE.NET.OpcEventServer.Version">
+            <summary>
+            Version number of the OPCAE.NET wrapper layer.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.OpcEventServer.ServerName">
+            <summary>
+            ProgID of the connected server.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.OpcEventServer.HostInfo">
+            <summary>
+            Server access credentials and machine name.
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.OpcEventServer.ConnectThroughNIOS">
+            <summary>
+            If TRUE a local OPC server is connected using NetInterop Services
+            </summary>
+        </member>
+        <member name="P:OPCAE.NET.OpcEventServer.ErrorsAsExecptions">
+            <summary>
+            If TRUE all errors throw an OPCException instead of returning a HRESULT error code.
+            </summary>
+        </member>
+        <member name="E:OPCAE.NET.OpcEventServer.ShutdownRequested">
+            <summary>
+            ShutdownRequestEventHandler
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.OpcConvert">
+            <summary>
+            Helper class that converts a long value to a FILETIME.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.OpcConvert.LongToFILETIME(System.Int64)">
+            <summary>
+            Convert long to FILETIME
+            </summary>
+            <param name="lt">long value with time info.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="T:OPCAE.NET.AreaBrowser">
+            <summary>
+            The OpcAEServer class contains the functions as defined in the OPC AE Server object
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.Create(OPCAE.NET.OpcEventServer)">
+            <summary>
+            Create an Area Browser
+            </summary>
+            <param name="srv"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.Dispose">
+            <summary>
+            The area browser COM object is released.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.ChangeBrowsePosition(OPCAE.OPCAEBrowseDirection,System.String)">
+            <summary>
+            Provides a way to move ‘up’ or ‘down’ in a hierarchical space from the current 
+            position, or a way to move to a specific position in the area space tree. 
+            The target String must represent an area, rather than a source.
+            </summary>
+            <param name="BrowseDirection">OPCAE_BROWSE_UP,OPCAE_BROWSE_DOWN or OPCAE_BROWSE_TO</param>
+            <param name="String">For DOWN, the partial area name of the area to move into. 
+            This would be one of the strings returned from BrowseOPCAreas.
+            For UP this parameter is ignored and should point to a NULL string.
+            For BROWSE_TO, the fully qualified area name (as obtained from GetQualifiedAreaName method) 
+            or an empty string to go to the root.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.BrowseOPCAreas(OPCAE.OPCAEBrowseType,System.String,System.Runtime.InteropServices.UCOMIEnumString@)">
+            <summary>
+            Return an IEnumString for a list of Areas as determined by the passed parameters. 
+            The position from which the browse is done can be set via the ChangeBrowsePosition.
+            </summary>
+            <param name="BrowseFilterType">OPC_AREA - returns only areas. OPC_SOURCE - returns only sources.</param>
+            <param name="FilterCriteria">A server specific filter string. See Appendix A for the definition of 
+            the syntax which must be supported by all servers. 
+            The implementer may extend this syntax to provide additional capabilities. 
+            An empty string indicates no filtering. </param>
+            <param name="EnumString">String enumerator with the browsed Areas</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.BrowseOPCAreas(OPCAE.OPCAEBrowseType,System.String,System.String[]@)">
+            <summary>
+            Return an string array with a list of Areas as determined by the passed parameters. 
+            The position from which the browse is done can be set via the ChangeBrowsePosition.
+            </summary>
+            <param name="BrowseFilterType">OPC_AREA - returns only areas. OPC_SOURCE - returns only sources.</param>
+            <param name="FilterCriteria">A server specific filter string. See Appendix A for the definition of 
+            the syntax which must be supported by all servers. 
+            The implementer may extend this syntax to provide additional capabilities. 
+            An empty string indicates no filtering. </param>
+            <param name="areas">Array with the browsed Areas. NULL if the HRESULT is other than S_OK or S_FALSE.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.GetQualifiedAreaName(System.String,System.String@)">
+            <summary>
+            Provides a mechanism to assemble a fully qualified Area name in a hierarchical space. 
+            This is required since at each point one is browsing just the names below the 
+            current node.
+            </summary>
+            <param name="AreaName">The name of an Area at the current level, obtained from the string 
+            enumerator returned by BrowseOPCAreas with a BrowseFilterType of OPC_AREA. </param>
+            <param name="QualifiedAreaName">Resulting fully qualified area name.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.GetQualifiedSourceName(System.String,System.String@)">
+            <summary>
+            Provides a mechanism to assemble a fully qualified Source name in a hierarchical 
+            space. This is required since at each point one is browsing just the names below 
+            the current node.
+            </summary>
+            <param name="SourceName">The name of a Source at the current level, 
+            obtained from the string enumerator returned by BrowseOPCAreas with a 
+            BrowseFilterType of OPC_SOURCE.</param>
+            <param name="QualifiedSourceName">Resulting fully qualified source name.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.AreaBrowser.GetTree(OPCAE.OPCAEBrowseType,System.String,System.Windows.Forms.TreeNode[]@)">
+            <summary>
+            Browse the whole server and return the result in a TreeNode structure.
+            </summary>
+            <param name="bType">Browse type filter.</param>
+            <param name="filterCriteria">Name filter.</param>
+            <param name="tree">Returned TreeNode structure with all browsed nodes.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="T:OPC.ErrorDescriptions">
+            <summary>
+            Helper class with descriptions of OPC and Windows erros.
+            </summary>
+        </member>
+        <member name="M:OPC.ErrorDescriptions.GetErrorDescription(System.Int32)">
+            <summary>
+            Get the description for the specified error code.
+            </summary>
+            <param name="hr">OPC or Windows error code.</param>
+            <returns></returns>
+        </member>
+        <member name="T:OPC.OpcAEServerBrowser">
+            <summary>
+            Browser for OPC AE servers on the local or a remote computer.
+            </summary>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.#ctor">
+            <summary>
+            Constructs a browser for the local computer.
+            </summary>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.#ctor(System.String)">
+            <summary>
+            Constructs a browser for the named computer.
+            </summary>
+            <param name="ComputerName">Computer network name.</param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.#ctor(OPC.Common.Host)">
+            <summary>
+            Constructs a browser with access credentials.
+            </summary>
+            <param name="host"></param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.Finalize">
+            <summary>
+            Destructor. The OpcEnum COM object is released.
+            </summary>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.GetServerList(System.String[]@)">
+            <summary>
+            Get the names of the registerd OPC DA 2.0 servers.<br/>
+            The ProgId of all OPCDA V2 servers is returned as a string array.<br/>
+            This array can e.g. be directly displayed in a Windows control.
+            </summary>
+            <param name="Servers">OUT:  ProgId of the enumerated OPC AE 1.0 servers</param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.GetServerList(System.String[]@,System.Guid[]@)">
+            <summary>
+            Get the CLSIDs of the installed OPC AE servers.
+            </summary>
+            <param name="Servers">OUT:  ProgIDs of the enumerated OPC AE 1.0 servers</param>
+            <param name="ClsIDs">OUT:  ClsIDs of the enumerated OPC AE 1.0 servers</param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.GetServerList(System.Guid[],System.String[]@)">
+            <summary>
+            Get the names of the OPC servers registered with one of the categories
+            listed in the CategoriesList parameter.<br/>
+            The ProgId of all servers is returned as a string array.<br/>
+            This array can e.g. be directly displayed in a Windos control.
+            </summary>
+            <param name="catList">IN: Array with the Guid of each category to include.</param>
+            <param name="Servers">OUT:  ProgId of the enumerated OPC DA V2 servers</param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.GetServerList(System.Guid[],System.String[]@,System.Guid[]@)">
+            <summary>
+            Get the names of the OPC servers registered with one of the categories
+            listed in the CategoriesList parameter.<br/>
+            The ProgId of all servers is returned as a string array.<br/>
+            This array can e.g. be directly displayed in a Windos control.
+            </summary>
+            <param name="catList">IN: Array with the Guid of each category to include.</param>
+            <param name="Servers">OUT:  ProgId of the enumerated OPC DA V2 servers</param>
+            <param name="ClsIDs">OUT:  CLSID of the enumerated OPC DA V2 servers</param>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.EnumClassesOfCategories(System.Int32,System.Guid[],System.Int32,System.Guid[],System.Object@)">
+            <summary>
+            Enumerate the registered OPC servers.<br/>
+            See OPC specs, chapter 'OPC Server Browser' for details
+            </summary>
+            <param name="catListLength"></param>
+            <param name="catList"></param>
+            <param name="reqListLenght"></param>
+            <param name="reqList"></param>
+            <param name="enumtemp"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.GetClassDetails(System.Guid@,System.String@,System.String@)">
+            <summary>
+            Get the ProgId and user type or the server with the specified CLSID.
+            See OPC specs, chapter 'OPC Server Browser' for details
+            </summary>
+            <param name="clsid">IN: CLSID of the OPC Server</param>
+            <param name="progID">OUT: ProgId name of the server</param>
+            <param name="userType">OUT: User type information</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPC.OpcAEServerBrowser.CLSIDFromProgID(System.String,System.Guid@)">
+            <summary>
+            Get a server's CLSID from it's ProgId.<br/>
+            See OPC specs, chapter 'OPC Server Browser' for details<br/>
+            </summary>
+            <param name="progId">IN: ProdId name of the OPC server</param>
+            <param name="clsid">OUT: CLSID of the server</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="T:OPCAE.NET.EventServerStatus">
+            <summary>
+            returned from server.GetStatus
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.StartTime">
+            <summary>
+            Server startup time.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.CurrentTime">
+            <summary>
+            Current time from server.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.LastUpdateTime">
+            <summary>
+            Time the server sent the last client update.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.ServerState">
+            <summary>
+            Current server state.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.MajorVersion">
+            <summary>
+            Major version number of the server.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.MinorVersion">
+            <summary>
+            Minor version number of the server.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.BuildNumber">
+            <summary>
+            Build number of the server.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.EventServerStatus.VendorInfo">
+            <summary>
+            Server Vendor information.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.ShutdownRequestEventArgs">
+            <summary>
+            Shutdown request handler    IOPCShutdown::ShutdownRequest
+            This method is provided by the client so that the server can request that 
+            the client disconnect from the server. The client should UnAdvise all 
+            connections, Remove all groups and release all interfaces. 
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.ShutdownRequestEventArgs.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="shutdownReasonp"></param>
+        </member>
+        <member name="F:OPCAE.NET.ShutdownRequestEventArgs.shutdownReason">
+            <summary>
+            Shut down reason descritption.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.ShutdownRequestEventHandler">
+            <summary>
+            Shut down notification event handler method.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.userEventArgs">
+            <summary>
+            Structure passed to the user OnEvent callback handler
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.userEventArgs.ClientSubscription">
+            <summary>
+            Client subscription identifier.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.userEventArgs.Refresh">
+            <summary>
+            Indicates that the event is due to a refresh request.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.userEventArgs.LastRefresh">
+            <summary>
+            Indicates that this is the last event for a refresh request.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.userEventArgs.Events">
+            <summary>
+            Data for a list of events.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.OnAEeventHandler">
+            <summary>
+            This user handler is called on events from the server
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.OPCChangeMask">
+            <summary>
+            Change masks passed to the event callback handler.
+            Multiple definitions may be ored
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_ACTIVE_STATE">
+            <summary>
+            Change to active state event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_ACK_STATE">
+            <summary>
+            Ack state event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_ENABLE_STATE">
+            <summary>
+            Change enable state event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_QUALITY">
+            <summary>
+            Change quality event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_SEVERITY">
+            <summary>
+            Change severity event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_SUBCONDITION">
+            <summary>
+            Subcondition change event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_MESSAGE">
+            <summary>
+            Change message event.
+            </summary>
+        </member>
+        <member name="F:OPCAE.NET.OPCChangeMask.OPC_CHANGE_ATTRIBUTE">
+            <summary>
+            Change attribute event.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCAEBrowseDirection">
+            <summary>
+            Used in ChangeBrowsePosition
+            </summary>
+        </member>
+        <member name="F:OPCAE.OPCAEBrowseDirection.OPCAE_BROWSE_UP">
+            <summary>
+            Change BrowsePosition upward toward the root.
+            </summary>
+        </member>
+        <member name="F:OPCAE.OPCAEBrowseDirection.OPCAE_BROWSE_DOWN">
+            <summary>
+            Change BrowsePosition downward into a branch.
+            </summary>
+        </member>
+        <member name="F:OPCAE.OPCAEBrowseDirection.OPCAE_BROWSE_TO">
+            <summary>
+            Change BrowsePosition to the specified branch.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCAEBrowseType">
+            <summary>
+            Used in BrowseOPCAreas
+            </summary>
+        </member>
+        <member name="F:OPCAE.OPCAEBrowseType.OPC_AREA">
+            <summary>
+            Browse filter for Areas
+            </summary>
+        </member>
+        <member name="F:OPCAE.OPCAEBrowseType.OPC_SOURCE">
+            <summary>
+            Browse filter for Sources
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCEventServerState">
+            <summary>
+            Possible server states.
+            Returned in struct EventServerStatus.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCAEFilters">
+            <summary>
+            Event filters.
+            Multiple definitions may be ored.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCAEEventType">
+            <summary>
+            Event types.
+            Multiple definitions may be ored.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCNewStates">
+            <summary>
+            New states passed to the event callback handler.
+            Multiple definitions may be ored.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OPCConditionState">
+            <summary>
+            Returned from GetConditionState.
+            </summary>
+        </member>
+        <member name="T:OPCAE.OnEventStruct">
+            <summary>
+            This is the OnEvent inner structure with data for each current event
+            </summary>
+        </member>
+        <member name="T:OPC.HRESULTS">
+            <summary>
+            HRESULTS enumerator. Defines the OPC error codes.
+            </summary>
+        </member>
+        <member name="T:OPC.OPCException">
+            <summary>
+            Allows the exception handler to read the HResult error code.
+            </summary>
+        </member>
+        <member name="M:OPC.OPCException.#ctor(System.Int32)">
+            <summary>
+            Throwse an exception of type OPCException with the HRESULT error code only
+            </summary>
+            <param name="rtc">HRESULT error code.</param>
+        </member>
+        <member name="M:OPC.OPCException.#ctor(System.Int32,System.String)">
+            <summary>
+            Throws an exception of type OPCException with the HRESULT error code and error message
+            </summary>
+            <param name="rtc">HRESULT error code.</param>
+            <param name="msg">Error descripotion.</param>
+        </member>
+        <member name="P:OPC.OPCException.Result">
+            <summary>
+            OPC error code.
+            </summary>
+        </member>
+        <member name="P:OPC.OPCException.Message">
+            <summary>
+            Message with error information.
+            </summary>
+        </member>
+        <member name="T:OPCAE.NET.EventSubscriptionMgt">
+            <summary>
+            Event Subscription Management methods for all functions defined in the OPC AE 
+            IOPCEventSubscriptionMgt and IOPCEventSubscriptionMgt2 interfaces.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.#ctor(OPCAE.NET.OnAEeventHandler)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="clh">Event handler method.</param>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.Dispose">
+            <summary>
+            Release all COM objects for this event subscription.
+            </summary>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.Create(OPCAE.NET.OpcEventServer,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Add an Event Subscription object to an Event Server.
+            Create an OPCEventSubcription object on behalf of this client and return an 
+            interface to the Client. 
+            This object will support at least IUnknown, IOPCEventSubscriptionMgt and
+            IConnectionPointContainer. The client can manage the state of this interface 
+            including the filter and can create subscriptions to it via ConnectionPoints 
+            as described later.
+            The Event Subscription Object uses conventional reference counting and thus 
+            will be deleted with all interfaces to it are released.
+            </summary>
+            <param name="srv">Object of the AE Server for which an EventSubscriptionMgt has to be created.</param>
+            <param name="Active">FALSE if the Event Subscription is to be created inactive.<br/> 
+            TRUE if the Event Subscriptions is to be created as active.<br/>
+            If the subscription is inactive, then the server will not send event notifications to the client 
+            based on the subscription, and has no responsibility to buffer or maintain the event notifications. 
+            Thus event notifications may be lost.</param>
+            <param name="BufferTime">The requested buffer time. The buffer time is in milliseconds and tells the server how often 
+            to send event notifications.
+            This is a minimum time - do not send event notifications any faster that this UNLESS dwMaxSize is greater than 0, 
+            in which case the server will send an event notification sooner to obey the dwMaxSize parameter. A value of 0 for 
+            dwBufferTime means that the server should send event notifications as soon as it gets them. This parameter along with 
+            the dwMaxSize parameter are used to improve communications efficiency between client and server. This parameter is a 
+            recommendation from the client, and the server is allowed to ignore the parameter. The server will return the buffer 
+            time it is actually providing in pdwRevisedBufferTime. If the revised buffer time does not equal the requested buffer 
+            time, then the server must return OPC_S_INVALIDBUFFERTIME, unless dwMaxSize is also invalid in which case the server 
+            must return OPC_S_INVALIDMAXSIZE.</param>
+            <param name="MaxSize">The requested maximum number of events that will be sent in a single IOPCEventSink::OnEvent callback. 
+            A value of 0 means that there is no limit to the number of events that will be sent in a single callback. 
+            Note that a value of dwMaxSize greater than 0, may cause the server to call the OnEvent callback more frequently than 
+            specified in the BufferTime parameter when a large number of events are being generated in order to limit the number 
+            of events to the MaxSize. This parameter is a recommendation from the client and the server is allowed to ignore this parameter. 
+            The server will return the actual number of events it is actually providing in pdwRevisedMaxSize. If the requested MaxSize does 
+            not equal the revised MaxSize then the Server must return OPC_S_INVALIDMAXSIZE.</param>
+            <param name="ClientSubscription">Client provided handle for this event subscription. This handle is passed back in the OnEvent 
+            callback to identify the subscription object that is calling back. The client should assign a unique value of ClientSubscription 
+            for each subscription object in order to detect the source of the callback information.</param>
+            <param name="RevisedBufferTime">The buffer time that the server is actually providing, which may differ from dwBufferTime. </param>
+            <param name="RevisedMaxSize">The maximum number of events that the server will actually be sending in a single OnAEevent callback, 
+            which may differ from MaxSize.</param>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.SetFilter(System.Int32,System.Int32[],System.Int32,System.Int32,System.String[],System.String[])">
+            <summary>
+            Sets the filtering criteria to be used for the event subscription.
+            Events may be selected using the following criteria:<br/>
+            • Type of event, i.e. simple, condition, or tracking.<br/>
+            • Event categories<br/>
+            • Lowest severity, i.e. all events with a severity greater than or equal to the specified severity.<br/>
+            • Highest severity, i.e. all events with a severity less than or equal to the specified severity.<br/>
+            • Process areas<br/>
+            • Event Sources<br/>
+            A list of values for a single criterion are logically ORed together (e.g. if two 
+            event categories arespecified, event notifications for both categories will be received). 
+            If multiple criteria are specified, they will be logically ANDed together, 
+            i.e. only those events satisfying all criteria will be selected. An example is 
+            specifying both lowest severity and highest severity will result in the selection 
+            of events with severities lying between the two values.<br/>
+            An OPCEventSubscription object has only one filter.
+            </summary>
+            <param name="EventType">A bit mask specifying which event types are of interest; 
+            OPC_SIMPLE_EVENT, OPC_CONDITION_EVENT, OPC_TRACKING_EVENT, OPC_ALL_EVENTS. These types can be OR’ed together 
+            to filter multiple types. A value of 0 is an error and E_INVALIDARG will be returned.</param>
+            <param name="EventCategories">Array of event categories of interest. These are DWORD event category codes 
+            returned by QueryEventCategories. A pointer to a NULL DWORD must be passed if dwNumCategories is 0.</param>
+            <param name="LowSeverity">Lowest severity of interest (inclusive). The severity range is 1 .. 1000.</param>
+            <param name="HighSeverity">Highest severity of interest (inclusive). The severity range is 1 .. 1000.</param>
+            <param name="AreaList">Array of process area strings of interest - only events or conditions in these areas 
+            will be reported. Area strings can be obtained using GetQualifiedAreaName. It is possible to specify areas 
+            using the wildcard syntax. Servers must support the wildcard syntax described in OPC AE specs Appendix A.</param>
+            <param name="SourceList">Array of event sources of interest - only events from these sources will be reported. 
+            It is possible to specify sources using the wildcard syntax. Servers must support the wildcard syntax described 
+            in OPC AE specs Appendix A.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.GetFilter(System.Int32@,System.Int32[]@,System.Int32@,System.Int32@,System.String[]@,System.String[]@)">
+            <summary>
+            Returns the filter currently in use for event subscriptions.
+            </summary>
+            <param name="EventType">A bit map specifying which event types are of allowed through the filter; 
+            OPC_SIMPLE_EVENT, OPC_CONDITION_EVENT, OPC_TRACKING_EVENT, OPC_ALL_EVENTS. 
+            These types can be OR’ed together to filter multiple types. </param>
+            <param name="EventCategories">Array of event categories for the filter.</param>
+            <param name="LowSeverity">Lowest severity allowed through filter. 
+            If the server does not support filtering on severity, the returned value will be 1.</param>
+            <param name="HighSeverity">Highest severity allowed through filter. 
+            If the server does not support filtering on severity, the returned value will be 1000. </param>
+            <param name="AreaList">List of process areas for the filter.</param>
+            <param name="SourceList">List of sources for the filter.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.SelectReturnedAttributes(System.Int32,System.Int32[])">
+            <summary>
+            For each Event Category, SelectReturnedAttributes sets the attributes to be returned 
+            with event notifications in the IOPCEventSink::OnEvent callback.
+            This method can be called multiple times in order to specify the attributes to 
+            return for each unique event type and event category pair. For a given event 
+            type and event category pair, the attributes returned can be “cleared” by setting 
+            the dwCount parameter to zero. If this is called multiple times for the same event 
+            type and event category pair, then the latest call will be in effect.
+            </summary>
+            <param name="EventCategory">The specific event category for which the list of attributes applies. 
+            These are returned from the QueryEventCategories method.</param>
+            <param name="AttributeIDs">The list IDs of the attributes to return with event notifications for 
+            the event type and event category specified. 
+            These are returned from the QueryEventAttributes method.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.GetReturnedAttributes(System.Int32,System.Int32[]@)">
+            <summary>
+            For each Event Category, GetReturnedAttributes retrieves the attributes which are 
+            currently specified to be returned with event notifications in the 
+            IOPCEventSink::OnEvent callback. All retrieved attributes have been specified 
+            by previous calls to SelectReturnedAttributes.
+            </summary>
+            <param name="EventCategory">The specific event category for which to retrieve the list of attributes.</param>
+            <param name="AttributeIDs">The list IDs of the attributes which are currently specified to be returned with 
+            event notifications for the event type and event category specified.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.Refresh">
+            <summary>
+            Force a refresh for all active conditions and inactive, unacknowledged conditions 
+            whose event notifications match the filter of the event subscription.
+            Clients will often need to get the current condition information from the server, 
+            particularly at client startup, for things such as a current alarm summary. 
+            The OPC Event Server supports this requirement by resending the most recent event 
+            notifications which satisfy the filter in the event subscription and which are 
+            related to active and/or unacknowledged conditions. The client can then derive 
+            the current condition status from the “refreshed” event notifications.
+            </summary>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.CancelRefresh">
+            <summary>
+            Cancels a refresh in progress for the event subscription.
+            If a refresh is in progress, the server should send one final callback with 
+            the last refresh flag set and the number of events equal to zero.
+            </summary>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.GetState(System.Boolean@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            Get the current state of the subscription. Client passes pointers to where 
+            information is to be saved.
+            </summary>
+            <param name="Active">The current active state of the subscription.</param>
+            <param name="BufferTime">The current buffer time configured for event notification. 
+            See the discussion in EventSubscriptionMgt.Create</param>
+            <param name="MaxSize">The current max number of events that will be sent in a single 
+            OnAEeventHandler callback. See the discussion in EventSubscriptionMgt.Create</param>
+            <param name="ClientSubscription">The client supplied subscription handle.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.SetState(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Client can set various properties of the event subscription. Pointers to 
+            items are used so that the client can omit properties he does not want to change 
+            by passing a null pointer.
+            </summary>
+            <param name="Active">TRUE (non-zero) to activate the subscription. <br/>
+            FALSE (0) to deactivate the subscription. If the client deactivates the subscription, then the server
+            will no longer send event notifications to the client based on that subscription, and has no responsibility 
+            to buffer or maintain the event notifications. Thus event notifications may be lost. Even if the subscription 
+            is inactive, the Refresh method will still function. In effect, this allows a client to obtain current condition 
+            states from time to time (by invoking Refresh) without the need to process event notifications in “real time”.</param>
+            <param name="BufferTime">New buffer time requested for the subscription by the client. 
+            If the revised buffer time does not equal the requested buffer time, then the server must return OPC_S_INVALIDBUFFERTIME, 
+            unless pdwMaxSize is also invalid in which case the server must return OPC_S_INVALIDMAXSIZE. 
+            See the discussion in EventSubscriptionMgt.Create. </param>
+            <param name="MaxSize">New maximum number of event notifications to send with a single IOPCEventSink::OnEvent callback. 
+            If the requested MaxSize does not equal the revised MaxSize then the Server must return OPC_S_INVALIDMAXSIZE.
+            See the discussion in EventSubscriptionMgt.Create.</param>
+            <param name="ClientSubscription">Client supplied handle for the subscription. 
+            This handle is returned in the data stream provided to the client’s OnAEeventHandler.
+            Note that this is not a pointer, so you must pass the existing handle even if you do not want to change it.</param>
+            <param name="RevisedBufferTime">The buffer time that the server is actually providing, which may differ from dwBufferTime.</param>
+            <param name="RevisedMaxSize">The maximum number of events that the server will actually be sending in a single 
+            OnAEeventHandler callback, which may differ from dwMaxSize.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.SetKeepAlive(System.Int32,System.Int32@)">
+            <summary>
+            Clients can set the keep-alive time for a subscription to cause the server to provide 
+            client callbacks on the subscription when there are no new events to report. 
+            Clients can then be assured of the health of the server and subscription without 
+            resorting to pinging the server with calls to GetStatus(). 
+            Using this facility, a client can expect a callback (data or keep-alive) within 
+            the specified keep-alive time.
+            Servers shall reset their keep-alive timers when real data is sent (i.e. it is not 
+            acceptable to constantly send the keep-alive callback at a fixed period equal to the 
+            keep-alive time irrespective of data callbacks).
+            </summary>
+            <param name="KeepAliveTime">The maximum amount of time (in milliseconds) the client expects to 
+            receive a new subscription callback since the last subscription callback.
+            A value of zero indicates the client does not wish to receive any keep-alive callbacks.</param>
+            <param name="RevisedKeepAliveTime">The KeepAliveTime the server is actually providing, 
+            which may differ from KeepAliveTime.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.GetKeepAlive(System.Int32@)">
+            <summary>
+            Returns the currently active keep-alive time for the subscription.
+            </summary>
+            <param name="KeepAliveTime">The maximum amount of time (in milliseconds) the server sends a new 
+            subscription callback since the last subscription callback.
+            A value of zero indicates the server will not send any keepalive callbacks. 
+            If SetKeepAlive() has never been called, the value will be 0.</param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="M:OPCAE.NET.EventSubscriptionMgt.OPCAE#Interface#IOPCEventSink#OnEvent(System.Int32,System.Boolean,System.Boolean,System.Int32,System.IntPtr)">
+            <summary>
+            Event callback handler
+            </summary>
+            <param name="hClientSubscription"></param>
+            <param name="bRefresh"></param>
+            <param name="bLastRefresh"></param>
+            <param name="dwCount"></param>
+            <param name="pEvents"></param>
+            <returns>HRESULTS error/success code.</returns>
+        </member>
+        <member name="T:OPC.Common.Host">
+            <summary>
+            The Host class is used to pass remote server access information to the Connect method. 
+            Which fields are actually used and need to be defined depend on the network, security and DCOM 
+            configuration.
+            </summary>
+        </member>
+        <member name="M:OPC.Common.Host.#ctor(System.String)">
+            <summary>
+            Creates a Host object, initialized with the given host machine name.
+            </summary>
+            <param name="hostName"></param>
+        </member>
+        <member name="F:OPC.Common.Host.HostName">
+            <summary>
+            Network name of the computer on which the OPC server is to be accessed.
+            </summary>
+        </member>
+        <member name="F:OPC.Common.Host.UserName">
+            <summary>
+            Name of the user account used to launch the OPC server.
+            </summary>
+        </member>
+        <member name="F:OPC.Common.Host.Password">
+            <summary>
+            Password for the user account 
+            </summary>
+        </member>
+        <member name="F:OPC.Common.Host.Domain">
+            <summary>
+            Domain name
+            </summary>
+        </member>
+        <member name="T:OPC.Common.ComApi">
+            <summary>
+            This class exposes Win32 and DCOM functions for calls from managed .Net code.
+            </summary>
+        </member>
+        <member name="M:OPC.Common.ComApi.EnumComputers">
+            <summary>
+            Enumerates the computers on the local network using the Netapi32.dll - NetServerEnum function.
+            </summary>
+            <returns>String array with the names of the accessible computers.</returns>
+        </member>
+        <member name="M:OPC.Common.ComApi.GetComputerName">
+            <summary>
+            Retrieves the name of the local computer using the Kernel32.dll - GetComputerName function.
+            </summary>
+            <returns>name of the local machine</returns>
+        </member>
+        <member name="M:OPC.Common.ComApi.InitializeSecurity">
+            <summary>
+            Initialize DCOM security to default OPC client settings.
+            </summary>
+        </member>
+        <member name="M:OPC.Common.ComApi.InitializeSecurity(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initialize DCOM security settings.<br/>
+            This method must be called at the very beginning of an application. 
+            It can be executed only once. If it was not yet called then .Net calls it with its
+            default setting when the first DCOm access is made.
+            </summary>
+            <param name="authLevel">Authentication level. A value of the RPC_C_AUTHN_LEVEL enumerator.</param>
+            <param name="impLevel">Impersonation level. A value of the RPC_C_IMP_LEVEL enumerator.</param>
+            <param name="eoac">Cloaking selection. A value of the EOAC enumerator.</param>
+        </member>
+        <member name="T:OPC.Common.ComApi.RPC_C_AUTHN_SVC">
+            <summary>
+            Authentication service selections for CoCreateInstance
+            </summary>
+        </member>
+        <member name="T:OPC.Common.ComApi.RPC_C_AUTHN_LEVEL">
+            <summary>
+            Authentication level values for CoInitializeSecurity
+            </summary>
+        </member>
+        <member name="T:OPC.Common.ComApi.RPC_C_IMP_LEVEL">
+            <summary>
+            Impersonation level values for CoInitializeSecurity
+            </summary>
+        </member>
+        <member name="T:OPC.Common.ComApi.EOAC">
+            <summary>
+            Cloaking level values for CoInitializeSecurity
+            </summary>
+        </member>
+    </members>
+</doc>

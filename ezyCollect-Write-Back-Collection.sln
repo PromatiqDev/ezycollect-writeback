@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APILib", "APILib\APILib.csproj", "{A37636ED-AA86-41C5-A787-3492AA6636BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonClass", "CommonClass\CommonClass.csproj", "{EA508D7D-7586-4B88-9AF9-73693385A29C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAGE_Drivers", "SAGE_Drivers\SAGE_Drivers.csproj", "{BA8A71A0-8074-4364-9DDB-3273A68D03E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncWriter", "SyncWriter\SyncWriter.csproj", "{DAD85D5B-9B5C-4735-BDE9-3E1C1FF841F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Writeback_UI", "Writeback_UI\Writeback_UI.csproj", "{5DCAE122-9694-4AFB-A46F-3947819531B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSageComAPI", "SageComAPI\TestSageComAPI.csproj", "{F59EEA44-7A56-4F60-9ED6-5F9116A56233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteBackService", "WriteBack_Service\WriteBackService.csproj", "{25EFF2A2-5493-410D-9E11-6A3F70F46F9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A37636ED-AA86-41C5-A787-3492AA6636BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37636ED-AA86-41C5-A787-3492AA6636BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37636ED-AA86-41C5-A787-3492AA6636BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37636ED-AA86-41C5-A787-3492AA6636BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA508D7D-7586-4B88-9AF9-73693385A29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA508D7D-7586-4B88-9AF9-73693385A29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA508D7D-7586-4B88-9AF9-73693385A29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA508D7D-7586-4B88-9AF9-73693385A29C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA8A71A0-8074-4364-9DDB-3273A68D03E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8A71A0-8074-4364-9DDB-3273A68D03E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8A71A0-8074-4364-9DDB-3273A68D03E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8A71A0-8074-4364-9DDB-3273A68D03E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD85D5B-9B5C-4735-BDE9-3E1C1FF841F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD85D5B-9B5C-4735-BDE9-3E1C1FF841F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD85D5B-9B5C-4735-BDE9-3E1C1FF841F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD85D5B-9B5C-4735-BDE9-3E1C1FF841F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCAE122-9694-4AFB-A46F-3947819531B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCAE122-9694-4AFB-A46F-3947819531B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCAE122-9694-4AFB-A46F-3947819531B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCAE122-9694-4AFB-A46F-3947819531B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59EEA44-7A56-4F60-9ED6-5F9116A56233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59EEA44-7A56-4F60-9ED6-5F9116A56233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59EEA44-7A56-4F60-9ED6-5F9116A56233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59EEA44-7A56-4F60-9ED6-5F9116A56233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25EFF2A2-5493-410D-9E11-6A3F70F46F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25EFF2A2-5493-410D-9E11-6A3F70F46F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25EFF2A2-5493-410D-9E11-6A3F70F46F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25EFF2A2-5493-410D-9E11-6A3F70F46F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D4F77A3-8EB5-4016-A936-15B507EF4D6D}
+	EndGlobalSection
+EndGlobal

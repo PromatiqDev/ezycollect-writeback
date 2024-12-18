@@ -1,0 +1,12 @@
+﻿{
+  "Settings": [
+    {
+      "Key": "POLLINTERVALMINUTES",
+      "Value": "5"
+    },
+    {
+      "Key": "DEBUG",
+      "Value": "1"
+    }
+  ]
+}

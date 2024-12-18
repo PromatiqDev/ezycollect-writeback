@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.exe
+   logfile = C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.InstallLog
+Installing service IQDataServiceAgent...
+Service IQDataServiceAgent has been successfully installed.
+Creating EventLog source IQDataServiceAgent in log Application...
+Committing assembly 'C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.exe
+   logfile = C:\Development\Bitbucket\IQData_ETL\IQDataServiceAgent\bin\Debug\IQDataServiceAgent.InstallLog

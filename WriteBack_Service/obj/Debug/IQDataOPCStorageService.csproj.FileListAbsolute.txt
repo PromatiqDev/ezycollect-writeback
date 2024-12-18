@@ -1,0 +1,22 @@
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\App.config
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.exe.config
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.exe
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.pdb
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.csprojResolveAssemblyReference.cache
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.exe
+C:\Development\OPC Import Service\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\App.config
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.exe.config
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.exe
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\IQDataOPCStorageService.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.exe
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.Extensions.dll
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.LOG.dll
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.SVC.Obj.dll
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.WinCC.Shared.dll
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.Extensions.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.LOG.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.SVC.Obj.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\bin\Debug\BWG.AECC.WinCC.Shared.pdb
+C:\Development\WCF Service\OPC WCF\IQDataOPCStorageService\obj\Debug\IQDataOPCStorageService.csprojResolveAssemblyReference.cache
