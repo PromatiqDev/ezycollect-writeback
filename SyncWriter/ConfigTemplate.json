@@ -1,0 +1,52 @@
+﻿{
+  "Settings": [
+    {
+      "KeyName": "URL",
+      "KeyValue": "https://0zkhsvueo2.execute-api.us-west-2.amazonaws.com/uat-test"
+    },
+    {
+      "KeyName": "ENDPOINT",
+      "KeyValue": "events/consume"
+    },
+    {
+      "KeyName": "FILTER",
+      "KeyValue": "status=FINAL&type=ACCEPTED&skip=0&limit=50"
+    },
+    {
+      "KeyName": "APIKEY",
+      "KeyValue": "****************"
+    },
+    {
+      "KeyName": "ERPTYPE",
+      "KeyValue": "SAGE"
+    },
+    {
+      "KeyName": "APPID",
+      "KeyValue": "XX"
+    },
+    {
+      "KeyName": "PROGRAMNAME",
+      "KeyValue": "XX1000"
+    },
+    {
+      "KeyName": "APPVERSION",
+      "KeyValue": "55A"
+    },
+    {
+      "KeyName": "ERPUSER",
+      "KeyValue": "ADMIN"
+    },
+    {
+      "KeyName": "ERPPASSWORD",
+      "KeyValue": "********"
+    },
+    {
+      "KeyName": "COMPANYID",
+      "KeyValue": "SAMINC"
+    },
+    {
+      "KeyName": "SYSTEMID",
+      "KeyValue": "SAMSYS"
+    }
+  ]
+}
